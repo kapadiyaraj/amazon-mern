@@ -1,0 +1,47 @@
+.hero {
+  background: linear-gradient(135deg, var(--amazon-dark) 0%, var(--amazon-blue) 100%);
+  color: var(--white);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 60px max(5vw, 24px);
+  min-height: 360px;
+  overflow: hidden;
+}
+.hero-content { max-width: 560px; }
+.hero-tag { font-size: 13px; font-weight: 600; color: var(--amazon-orange); margin-bottom: 12px; }
+.hero h1 { font-size: clamp(28px, 4vw, 48px); font-weight: 800; line-height: 1.2; margin-bottom: 16px; }
+.hero h1 span { color: var(--amazon-orange); }
+.hero-sub { font-size: 16px; color: rgba(255,255,255,0.75); margin-bottom: 28px; line-height: 1.6; }
+.hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-visual { font-size: 120px; animation: float 4s ease-in-out infinite; }
+.hero-float { filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3)); }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-20px)} }
+
+.section { margin: 40px 0; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.section-header h2 { font-size: 20px; font-weight: 700; }
+.see-all { font-size: 14px; color: #0066c0; font-weight: 500; }
+.see-all:hover { text-decoration: underline; }
+
+.category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; }
+.category-card {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 20px 12px; border-radius: var(--radius);
+  text-align: center; transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow);
+}
+.category-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.category-icon { font-size: 36px; margin-bottom: 8px; }
+.category-name { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+
+.trust-badges {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px; margin: 48px 0;
+}
+.trust-card {
+  display: flex; align-items: center; gap: 16px;
+  background: var(--white); padding: 20px; border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.trust-icon { font-size: 32px; }
+.trust-card strong { display: block; font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.trust-card p { font-size: 12px; color: var(--text-secondary); }
